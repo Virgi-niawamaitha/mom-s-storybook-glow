@@ -46,10 +46,10 @@ const HomePage: React.FC = () => {
             </div>
             
             <Button 
-              onClick={() => navigate('/storybook')} 
+              onClick={() => navigate('/birthday')} 
               className="bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white px-8 py-6 text-lg rounded-full shadow-md hover:shadow-lg transition-all duration-300 glow-effect"
             >
-              <span className="mr-2">Enter Storybook</span>
+              <span className="mr-2">View Birthday Wishes</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>

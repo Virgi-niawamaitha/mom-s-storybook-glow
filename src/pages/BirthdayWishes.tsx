@@ -1,11 +1,13 @@
 
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PageTransition from '@/components/PageTransition';
 import RoseDecoration from '@/components/RoseDecoration';
 import { Card, CardContent } from "@/components/ui/card";
 import confetti from 'canvas-confetti';
 
 const BirthdayWishes: React.FC = () => {
+  const navigate = useNavigate();
   const [activeWish, setActiveWish] = useState(0);
   
   const birthdayWishes = [
@@ -63,6 +65,10 @@ const BirthdayWishes: React.FC = () => {
     });
   };
 
+  const navigateToPage = (page: string) => {
+    navigate(`/${page}`);
+  };
+
   return (
     <PageTransition>
       <div className="min-h-[calc(100vh-80px)] py-12 px-4 relative bg-gradient-to-b from-primary-50 to-secondary-50">
@@ -73,7 +79,7 @@ const BirthdayWishes: React.FC = () => {
           {Array.from({ length: 15 }).map((_, index) => (
             <div 
               key={index} 
-              className="balloon"
+              className="balloon rose-balloon"
               style={{ 
                 left: `${Math.random() * 100}%`, 
                 animationDelay: `${Math.random() * 5}s`,
@@ -132,21 +138,39 @@ const BirthdayWishes: React.FC = () => {
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="gift-box memory-gift">
+              <div 
+                className="gift-box memory-gift" 
+                onClick={() => navigateToPage('memories')}
+                role="button"
+                tabIndex={0}
+                aria-label="View Memories"
+              >
                 <div className="gift-lid"></div>
                 <div className="gift-box-body">
                   <span className="text-white">Memories</span>
                 </div>
               </div>
               
-              <div className="gift-box compliment-gift">
+              <div 
+                className="gift-box compliment-gift" 
+                onClick={() => navigateToPage('compliments')}
+                role="button"
+                tabIndex={0}
+                aria-label="View Compliments"
+              >
                 <div className="gift-lid"></div>
                 <div className="gift-box-body">
                   <span className="text-white">Compliments</span>
                 </div>
               </div>
               
-              <div className="gift-box story-gift">
+              <div 
+                className="gift-box story-gift" 
+                onClick={() => navigateToPage('storybook')}
+                role="button"
+                tabIndex={0}
+                aria-label="View Stories"
+              >
                 <div className="gift-lid"></div>
                 <div className="gift-box-body">
                   <span className="text-white">Stories</span>
