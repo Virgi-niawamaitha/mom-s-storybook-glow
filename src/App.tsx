@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import StorybookPage from "./pages/StorybookPage";
 import MemoriesPage from "./pages/MemoriesPage";
 import ComplimentsPage from "./pages/ComplimentsPage";
+import BirthdayWishes from "./pages/BirthdayWishes";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
               <Route path="/storybook" element={<StorybookPage />} />
               <Route path="/memories" element={<MemoriesPage />} />
               <Route path="/compliments" element={<ComplimentsPage />} />
+              <Route path="/birthday" element={<BirthdayWishes />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

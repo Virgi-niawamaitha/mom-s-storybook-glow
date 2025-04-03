@@ -191,4 +191,279 @@
     background-color: rgba(255, 255, 255, 0.95);
     background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffb6c1' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
+  
+  /* Birthday specific styles */
+  .glow-text {
+    text-shadow: 0 0 5px theme('colors.primary.300'),
+                0 0 10px theme('colors.primary.200');
+    animation: textGlow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes textGlow {
+    from {
+      text-shadow: 0 0 5px theme('colors.primary.300'),
+                  0 0 10px theme('colors.primary.200');
+    }
+    to {
+      text-shadow: 0 0 8px theme('colors.primary.400'),
+                  0 0 15px theme('colors.primary.300'),
+                  0 0 20px theme('colors.secondary.300');
+    }
+  }
+  
+  .birthday-card {
+    background: linear-gradient(135deg, #ffffff 0%, #fcf0f4 100%);
+    border: 1px solid theme('colors.primary.200');
+  }
+  
+  .birthday-balloons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .balloon {
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    background: theme('colors.primary.300');
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    bottom: -100px;
+    animation: balloonFloat linear infinite;
+    opacity: 0.7;
+  }
+  
+  .balloon:nth-child(even) {
+    background: theme('colors.secondary.300');
+  }
+  
+  .balloon:nth-child(3n) {
+    background: theme('colors.primary.400');
+    width: 24px;
+    height: 28px;
+  }
+  
+  .balloon:nth-child(5n) {
+    background: theme('colors.secondary.400');
+    width: 20px;
+    height: 24px;
+  }
+  
+  .balloon::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.2);
+    top: 100%;
+    left: 50%;
+  }
+  
+  @keyframes balloonFloat {
+    0% {
+      transform: translateY(100vh);
+    }
+    100% {
+      transform: translateY(-100vh);
+    }
+  }
+  
+  .birthday-cake {
+    position: relative;
+    width: 160px;
+    height: 140px;
+    margin: 0 auto 40px;
+  }
+  
+  .cake-base {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .cake-bottom {
+    position: relative;
+    height: 40px;
+    width: 160px;
+    background: linear-gradient(to right, #f5c0c0, #f8d6d6);
+    border-radius: 10px 10px 5px 5px;
+  }
+  
+  .cake-middle {
+    position: relative;
+    height: 35px;
+    width: 140px;
+    margin: 0 auto 0;
+    background: linear-gradient(to right, #f8d6d6, #fceaea);
+    border-radius: 5px;
+  }
+  
+  .cake-top {
+    position: relative;
+    height: 30px;
+    width: 120px;
+    margin: 0 auto 0;
+    background: linear-gradient(to right, #fceaea, #ffffff);
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .candle {
+    position: absolute;
+    width: 8px;
+    height: 30px;
+    background: linear-gradient(to right, #fce9b5, #f8d6d6);
+    bottom: 105px;
+    border-radius: 4px;
+  }
+  
+  .flame {
+    position: absolute;
+    width: 8px;
+    height: 14px;
+    background: linear-gradient(to top, #ff9d00, #ff0000);
+    border-radius: 50% 50% 20% 20%;
+    bottom: 100%;
+    animation: flicker 0.6s ease-in-out infinite alternate;
+    transform-origin: center bottom;
+  }
+  
+  @keyframes flicker {
+    0%, 100% {
+      transform: scaleY(1) rotate(-2deg);
+      opacity: 1;
+    }
+    50% {
+      transform: scaleY(0.9) rotate(2deg);
+      opacity: 0.8;
+    }
+  }
+  
+  .gift-section {
+    margin-top: 60px;
+  }
+  
+  .gift-box {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    perspective: 800px;
+    cursor: pointer;
+  }
+  
+  .gift-lid {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    background: theme('colors.primary.500');
+    top: -10px;
+    left: 0;
+    transform-origin: center bottom;
+    transition: transform 0.5s ease-in-out;
+    z-index: 2;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .gift-box-body {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: theme('colors.primary.600');
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
+  .gift-box:hover .gift-lid {
+    transform: rotateX(-80deg);
+  }
+  
+  .memory-gift .gift-lid {
+    background: theme('colors.primary.500');
+  }
+  
+  .memory-gift .gift-box-body {
+    background: theme('colors.primary.600');
+  }
+  
+  .compliment-gift .gift-lid {
+    background: theme('colors.secondary.400');
+  }
+  
+  .compliment-gift .gift-box-body {
+    background: theme('colors.secondary.500');
+  }
+  
+  .story-gift .gift-lid {
+    background: linear-gradient(to right, theme('colors.primary.500'), theme('colors.secondary.400'));
+  }
+  
+  .story-gift .gift-box-body {
+    background: linear-gradient(to right, theme('colors.primary.600'), theme('colors.secondary.500'));
+  }
+  
+  /* Photo frames for memory images */
+  .memory-photo {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* 4:3 aspect ratio */
+    background-color: #f8f8f8;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+  }
+  
+  .memory-photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .memory-photo:hover img {
+    transform: scale(1.05);
+  }
+  
+  .memory-photo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+    pointer-events: none;
+  }
+  
+  /* Polaroid style for memory photos */
+  .polaroid {
+    background: #fff;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+  }
+  
+  .polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  .polaroid-caption {
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: theme('colors.foreground');
+  }
 }

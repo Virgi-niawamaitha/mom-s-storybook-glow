@@ -2,62 +2,74 @@
 import React, { useEffect, useRef } from 'react';
 import PageTransition from '@/components/PageTransition';
 import RoseDecoration from '@/components/RoseDecoration';
+import { Card } from '@/components/ui/card';
 
 const memories = [
   {
     title: "Birth & Childhood",
     year: "The Beginning",
-    description: "From the day you were born, your spirit and strength were evident. Growing up, you carried a light that would guide many."
+    description: "From the day you were born, your spirit and strength were evident. Growing up, you carried a light that would guide many.",
+    imageUrl: "https://placehold.co/600x400/f8d6d6/fff?text=Childhood+Memory"
   },
   {
     title: "Motherhood Begins",
     year: "A New Chapter",
-    description: "The day you became a mother, your life transformed. You embraced this role with all your heart, showering us with unconditional love from the very start."
+    description: "The day you became a mother, your life transformed. You embraced this role with all your heart, showering us with unconditional love from the very start.",
+    imageUrl: "https://placehold.co/600x400/f9e5d2/fff?text=Motherhood+Begins"
   },
   {
     title: "Sacrifices & Strength",
     year: "The Pillar",
-    description: "Raising us alone was never easy, yet you made it look effortless. Working tirelessly to secure our future, you never complained about the challenges you faced."
+    description: "Raising us alone was never easy, yet you made it look effortless. Working tirelessly to secure our future, you never complained about the challenges you faced.",
+    imageUrl: "https://placehold.co/600x400/e5f9d2/fff?text=Our+Pillar"
   },
   {
     title: "Blue Post Adventures",
     year: "Unforgettable Times",
-    description: "Remember those trips to Blue Post? The laughter, the stories, the pure joy of being together – these moments are etched in our hearts forever."
+    description: "Remember those trips to Blue Post? The laughter, the stories, the pure joy of being together – these moments are etched in our hearts forever.",
+    imageUrl: "https://placehold.co/600x400/d2f9f1/fff?text=Blue+Post+Adventures"
   },
   {
     title: "Two Rivers Memories",
     year: "Shopping & Ice Cream",
-    description: "Our visits to Two Rivers weren't just about shopping; they were about creating memories. Your smile as we enjoyed ice cream together is a picture we'll always treasure."
+    description: "Our visits to Two Rivers weren't just about shopping; they were about creating memories. Your smile as we enjoyed ice cream together is a picture we'll always treasure.",
+    imageUrl: "https://placehold.co/600x400/d2dcf9/fff?text=Two+Rivers+Memories"
   },
   {
     title: "Green Span Mall Days",
     year: "Weekend Treats",
-    description: "Those weekend trips to Green Span Mall were our little escape. You always made sure we had fun, even when things were tight."
+    description: "Those weekend trips to Green Span Mall were our little escape. You always made sure we had fun, even when things were tight.",
+    imageUrl: "https://placehold.co/600x400/e0d2f9/fff?text=Mall+Days"
   },
   {
     title: "KFC Celebrations",
     year: "Simple Joys",
-    description: "KFC wasn't just food; it was our celebration spot. Every achievement, no matter how small, was worthy of celebration in your eyes."
+    description: "KFC wasn't just food; it was our celebration spot. Every achievement, no matter how small, was worthy of celebration in your eyes.",
+    imageUrl: "https://placehold.co/600x400/f9d2e8/fff?text=KFC+Celebrations"
   },
   {
     title: "Late Night Homework",
     year: "Education First",
-    description: "You stayed up countless nights helping us with homework, emphasizing the importance of education. Your dedication to our learning shaped our future."
+    description: "You stayed up countless nights helping us with homework, emphasizing the importance of education. Your dedication to our learning shaped our future.",
+    imageUrl: "https://placehold.co/600x400/f9f2d2/fff?text=Late+Night+Studies"
   },
   {
     title: "Cartoon Saturdays",
     year: "Bonding Time",
-    description: "Saturday mornings were reserved for cartoons. Those shared laughs over animated adventures created bonds that time cannot break."
+    description: "Saturday mornings were reserved for cartoons. Those shared laughs over animated adventures created bonds that time cannot break.",
+    imageUrl: "https://placehold.co/600x400/d2f9db/fff?text=Cartoon+Saturdays"
   },
   {
     title: "Sundowner Songs",
     year: "Musical Evenings",
-    description: "As the sun set, music filled our home. Those songs became the soundtrack of our childhood, bringing comfort and joy."
+    description: "As the sun set, music filled our home. Those songs became the soundtrack of our childhood, bringing comfort and joy.",
+    imageUrl: "https://placehold.co/600x400/f9d8d2/fff?text=Sundowner+Songs"
   },
   {
     title: "The Future Ahead",
     year: "Continuing Legacy",
-    description: "Your love, lessons, and legacy live on in us. Wherever we go, whatever we achieve, it's all because of the foundation you built."
+    description: "Your love, lessons, and legacy live on in us. Wherever we go, whatever we achieve, it's all because of the foundation you built.",
+    imageUrl: "https://placehold.co/600x400/d2e5f9/fff?text=Your+Legacy"
   },
 ];
 
@@ -97,27 +109,49 @@ const MemoriesPage: React.FC = () => {
         <RoseDecoration position="top-left" size="md" />
         <RoseDecoration position="bottom-right" size="md" />
         
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif text-primary-600 text-center mb-12">Memory Lane</h2>
           
           <div className="space-y-0">
             {memories.map((memory, index) => (
               <div key={index} className="memory-item opacity-0" style={{ transitionDelay: `${index * 100}ms` }}>
-                <div className="ml-4">
+                <div className="ml-4 md:ml-8">
                   <h3 className="text-xl font-serif text-primary-600 mb-1">{memory.title}</h3>
                   <div className="text-sm text-primary-400 mb-2">{memory.year}</div>
-                  <p className="text-foreground/80 mb-4">{memory.description}</p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                    <div className={`polaroid transform ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
+                      <div className="memory-photo">
+                        <img 
+                          src={memory.imageUrl} 
+                          alt={memory.title} 
+                          className="w-full h-full object-cover" 
+                        />
+                      </div>
+                      <div className="polaroid-caption">
+                        {memory.title} - {memory.year}
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center">
+                      <p className="text-foreground/80">{memory.description}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
             
-            <div className="memory-item opacity-0 text-center py-8">
+            <div className="memory-item opacity-0 text-center py-12">
               <div className="ml-4">
-                <div className="rose-border inline-block p-6 bg-white/90">
+                <Card className="p-6 bg-white/90 shadow-lg border border-primary-200">
                   <p className="font-serif text-lg text-primary-700">
                     "No matter where we go, no matter how far we are, your love and lessons are forever part of us."
                   </p>
-                </div>
+                  
+                  <div className="mt-4 text-sm text-primary-500">
+                    Happy Birthday, Mom! We love you beyond words.
+                  </div>
+                </Card>
               </div>
             </div>
           </div>
