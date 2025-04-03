@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart } from 'lucide-react';
+import { Heart, Cake } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const Header: React.FC = () => {
@@ -24,6 +24,12 @@ const Header: React.FC = () => {
         </Button>
         <Button asChild variant="ghost" className="font-medium text-foreground/80 hover:text-primary">
           <Link to="/compliments">Compliments</Link>
+        </Button>
+        <Button asChild variant="ghost" className="font-medium text-foreground/80 hover:text-primary flex items-center gap-1">
+          <Link to="/birthday">
+            <Cake className="h-4 w-4 mr-1" />
+            Birthday Wishes
+          </Link>
         </Button>
       </nav>
     </header>

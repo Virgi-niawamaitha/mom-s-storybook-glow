@@ -20,7 +20,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen flex flex-col bg-background rose-bg">
+        <div className="min-h-screen flex flex-col bg-background" style={{
+          background: "linear-gradient(135deg, #fff5f8, #fff9fb)"
+        }}>
           <Header />
           <main className="flex-1">
             <Routes>
