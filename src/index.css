@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&family=Indie+Flower&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -44,7 +43,7 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657l1.415 1.414L13.857 0H11.03zm32.284 0l6.9 6.9-1.414 1.414-9.9-9.9h4.429zm-16.485 0l-6.9 6.9 1.414 1.414 9.9-9.9h-4.427zm-8.586 0L8.516 9.728l1.414 1.414L20.143 0h-2.83zM0 0l.828.828L2.243.96 0 5.373v-2.83zM0 54.627l.828-.83 1.415 1.415L0 51.8v2.827zM0 5.373l.828.83L0 8.2V5.374zm0 32.284l10.728-10.728 1.414 1.414L0 46.143v-8.485zm0-16.485l21.657-21.657 1.414 1.414L0 13.857V-4.428zm0 8.586L10.728 8.516l1.414 1.414L0 20.143v-11.03zm54.627 0L43.9 30.9l1.414 1.413L60 45.742v-2.827zm0-32.284L32.97 2.243l1.414 1.415L60 8.2V5.374zm0 16.485L32.97 13.244l1.414 1.414L60 20.2v-8.485zm0 8.586L21.657 32.97l1.414 1.414L60 46.142v-8.485zM39.9 16.385l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zm-9.9 9.9l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zm9.9 9.9l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zm-9.9 9.9l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zm19.8 0l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zM20.1 16.385L18.685 14.97l-1.414 1.414 1.414 1.414 1.415-1.414zm9.9 9.9l-1.414-1.414-1.414 1.414 1.414 1.414 1.414-1.414zm-9.9 9.9l-1.414-1.414-1.414 1.414 1.414 1.414 1.415-1.414zm-9.9 9.9l-1.414-1.414-1.414 1.414 1.414 1.414 1.415-1.414z' fill='%23fadadd' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657l1.415 1.414L13.857 0H11.03zm32.284 0l6.9 6.9-1.414 1.414-9.9-9.9h4.429zm-16.485 0l-6.9 6.9 1.414 1.414 9.9-9.9h-4.427zm-8.586 0L8.516 9.728l1.414 1.414L20.143 0h-2.83zM0 0l.828.828L2.243.96 0 5.373v-2.83zM0 54.627l.828-.83 1.415 1.415L0 51.8v2.827zM0 5.373l.828.83L0 8.2V5.374zm0 32.284l10.728-10.728 1.414 1.414L0 46.143v-8.485zm0-16.485l21.657-21.657 1.414 1.414L0 13.857V-4.428zm0 8.586L10.728 8.516l1.414 1.414L0 20.143v-11.03zm54.627 0L43.9 30.9l1.414 1.413L60 45.742v-2.827zm0-32.284L32.97 2.243l1.414 1.415L60 8.2V5.374zm0 16.485L32.97 13.244l1.414 1.414L60 20.2v-8.485zm0 8.586L21.657 32.97l1.414 1.414L60 46.142v-8.485zM39.9 16.385l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zm-9.9 9.9l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zm9.9 9.9l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zm-9.9 9.9l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zm19.8 0l1.414-1.414 1.414 1.414-1.414 1.414-1.414-1.414zM20.1 16.385L18.685 14.97l-1.414 1.414 1.414 1.414 1.415-1.414zm9.9 9.9l-1.414-1.414-1.414 1.414 1.414 1.414 1.414-1.414zm-9.9 9.9l-1.414-1.414-1.414 1.414 1.414 1.414 1.415-1.414z' fill='%23fadadd' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -412,7 +411,7 @@
   .memory-photo {
     position: relative;
     width: 100%;
-    padding-top: 75%; /* 4:3 aspect ratio */
+    padding-top: min(75%, 500px); /* Dynamic aspect ratio with max height */
     background-color: #f8f8f8;
     overflow: hidden;
     border-radius: 5px;
@@ -422,16 +421,21 @@
   
   .memory-photo img {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
     transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
   }
   
   .memory-photo:hover img {
-    transform: scale(1.05);
+    transform: translate(-50%, -50%) scale(1.05);
   }
   
   .memory-photo::after {

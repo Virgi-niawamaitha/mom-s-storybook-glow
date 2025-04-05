@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import PageTransition from '@/components/PageTransition';
 import RoseDecoration from '@/components/RoseDecoration';
@@ -105,27 +104,28 @@ const MemoriesPage: React.FC = () => {
 
   return (
     <PageTransition>
-      <div className="min-h-[calc(100vh-80px)] py-12 px-4 relative">
-        <RoseDecoration position="top-left" size="md" />
-        <RoseDecoration position="bottom-right" size="md" />
+      <div className="min-h-[calc(100vh-80px)] py-6 md:py-12 px-4 relative">
+        <RoseDecoration position="top-left" size="md" className="hidden md:block" />
+        <RoseDecoration position="bottom-right" size="md" className="hidden md:block" />
         
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif text-primary-600 text-center mb-12">Memory Lane</h2>
+          <h2 className="text-2xl md:text-4xl font-serif text-primary-600 text-center mb-8 md:mb-12">Memory Lane</h2>
           
-          <div className="space-y-0">
+          <div className="space-y-8 md:space-y-12">
             {memories.map((memory, index) => (
               <div key={index} className="memory-item opacity-0" style={{ transitionDelay: `${index * 100}ms` }}>
-                <div className="ml-4 md:ml-8">
-                  <h3 className="text-xl font-serif text-primary-600 mb-1">{memory.title}</h3>
+                <div className="ml-2 md:ml-8">
+                  <h3 className="text-lg md:text-xl font-serif text-primary-600 mb-1">{memory.title}</h3>
                   <div className="text-sm text-primary-400 mb-2">{memory.year}</div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-                    <div className={`polaroid transform ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'}`}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4">
+                    <div className={`polaroid transform ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'} mx-auto md:mx-0 max-w-sm w-full`}>
                       <div className="memory-photo">
                         <img 
                           src={memory.imageUrl} 
                           alt={memory.title} 
-                          className="w-full h-full object-cover" 
+                          loading="lazy"
+                          className="w-full h-full object-contain" 
                         />
                       </div>
                       <div className="polaroid-caption">
@@ -134,25 +134,23 @@ const MemoriesPage: React.FC = () => {
                     </div>
                     
                     <div className="flex items-center">
-                      <p className="text-foreground/80">{memory.description}</p>
+                      <p className="text-foreground/80 text-sm md:text-base">{memory.description}</p>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
             
-            <div className="memory-item opacity-0 text-center py-12">
-              <div className="ml-4">
-                <Card className="p-6 bg-white/90 shadow-lg border border-primary-200">
-                  <p className="font-serif text-lg text-primary-700">
-                    "No matter where we go, no matter how far we are, your love and lessons are forever part of us."
-                  </p>
-                  
-                  <div className="mt-4 text-sm text-primary-500">
-                    Happy Birthday, Mom! We love you beyond words.
-                  </div>
-                </Card>
-              </div>
+            <div className="ml-2 md:ml-4 mt-8 md:mt-12">
+              <Card className="p-4 md:p-6 bg-white/90 shadow-lg border border-primary-200">
+                <p className="font-serif text-base md:text-lg text-primary-700">
+                  "No matter where we go, no matter how far we are, your love and lessons are forever part of us."
+                </p>
+                
+                <div className="mt-4 text-sm text-primary-500">
+                  Happy Birthday, Mom! We love you beyond words.
+                </div>
+              </Card>
             </div>
           </div>
         </div>
