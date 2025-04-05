@@ -1,4 +1,3 @@
-
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -20,5 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: mode === 'production' ? '/{repo-name}/' : '/', // Replace {repo-name} with your actual GitHub repository name
+  base: mode === 'production' ? '/mom-s-storybook-glow/' : '/',
 }));
