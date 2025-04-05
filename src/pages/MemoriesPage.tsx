@@ -8,67 +8,67 @@ const memories = [
     title: "Birth & Childhood",
     year: "The Beginning",
     description: "From the day you were born, your spirit and strength were evident. Growing up, you carried a light that would guide many.",
-    imageUrl: "/images/memories/childhood.jpg"
+    imageUrl: "images/memories/childhood.jpg"
   },
   {
     title: "Motherhood Begins",
     year: "A New Chapter",
     description: "The day you became a mother, your life transformed. You embraced this role with all your heart, showering us with unconditional love from the very start.",
-    imageUrl: "/images/memories/motherhood.jpg"
+    imageUrl: "images/memories/motherhood.jpg"
   },
   {
     title: "Sacrifices & Strength",
     year: "The Pillar",
     description: "Raising us alone was never easy, yet you made it look effortless. Working tirelessly to secure our future, you never complained about the challenges you faced.",
-    imageUrl: "/images/memories/us.jpg"
+    imageUrl: "images/memories/us.jpg"
   },
   {
     title: "Blue Post Adventures",
     year: "Unforgettable Times",
     description: "Remember those trips to Blue Post? The laughter, the stories, the pure joy of being together – these moments are etched in our hearts forever.",
-    imageUrl: "/images/memories/bluepost.jpg"
+    imageUrl: "images/memories/bluepost.jpg"
   },
   {
     title: "Two Rivers Memories",
     year: "Shopping & Ice Cream",
     description: "Our visits to Two Rivers weren't just about shopping; they were about creating memories. Your smile as we enjoyed ice cream together is a picture we'll always treasure.",
-    imageUrl: "/images/memories/two rivers.jpg"
+    imageUrl: "images/memories/two rivers.jpg"
   },
   {
     title: "Green Span Mall Days",
     year: "Weekend Treats",
     description: "Those weekend trips to Green Span Mall were our little escape. You always made sure we had fun, even when things were tight.",
-    imageUrl: "/images/memories/greenspan.jpg"
+    imageUrl: "images/memories/greenspan.jpg"
   },
   {
     title: "KFC Celebrations",
     year: "Simple Joys",
     description: "KFC wasn't just food; it was our celebration spot. Every achievement, no matter how small, was worthy of celebration in your eyes.",
-    imageUrl: "/images/memories/kfc.jpg"
+    imageUrl: "images/memories/kfc.jpg"
   },
   {
     title: "Late Night Homework",
     year: "Education First",
     description: "You stayed up countless nights helping us with homework, emphasizing the importance of education. Your dedication to our learning shaped our future.",
-    imageUrl: "/images/memories/late homework.jpg"
+    imageUrl: "images/memories/late homework.jpg"
   },
   {
     title: "Cartoon Saturdays",
     year: "Bonding Time",
     description: "Saturday mornings were reserved for cartoons. Those shared laughs over animated adventures created bonds that time cannot break.",
-    imageUrl: "/images/memories/cartoons.jpg"
+    imageUrl: "images/memories/cartoons.jpg"
   },
   {
     title: "Sundowner Songs",
     year: "Musical Evenings",
     description: "As the sun set, music filled our home. Those songs became the soundtrack of our childhood, bringing comfort and joy.",
-    imageUrl: "/images/memories/sundowner.jpg"
+    imageUrl: "images/memories/sundowner.jpg"
   },
   {
     title: "The Future Ahead",
     year: "Continuing Legacy",
     description: "Your love, lessons, and legacy live on in us. Wherever we go, whatever we achieve, it's all because of the foundation you built.",
-    imageUrl: "/images/memories/future.jpg"
+    imageUrl: "images/memories/future.jpg"
   },
 ];
 
